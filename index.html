@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./css/stylesheet.css" rel="stylesheet"> 
+</head>
+<body>
+	<header>Match-Match Game</header>
+		<div class='gradient'></div>
+			<div class='wrapper'>
+				<nav class='top_nav'>
+					<ul>
+						<li>
+							<button  id='newGameBtn' onclick='newBoard()' class='control_button box_shadow'><span>New Game</span></button>
+						</li>
+						<li>
+							<p>Difficulty : </p>
+						</li>
+						<li>
+							<button onclick='setDifficulty(8)' class='box_shadow'>low</button>
+						</li>
+						<li>
+							<button onclick='setDifficulty(12)' class='box_shadow'>medium</button>
+						</li>
+						<li>
+							<button onclick='setDifficulty(16)' class='box_shadow'>high</button>
+						</li>
+					</ul>
+				</nav>
+				<nav class='aside_nav'>
+				  <button  onclick='setCardBack("diamond")' class='cardback_button box_shadow'><i class='fa fa-diamond fa-2x'></i></button>
+				  <button onclick='setCardBack("heart")' class='cardback_button box_shadow'><i class='fa fa-heart fa-2x'></i></button>
+				  <button onclick='setCardBack("snowflake")' class='cardback_button box_shadow'><i class='fa fa-snowflake-o fa-2x'></i></button>
+				</nav>
+				<main>
+					<section id='gameInfo'>
+						<p><strong>Match-Match Game</strong> is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. </p>
+						<h4>How to play</h4>
+						<ul>
+							<li>the goal of the game - find all the pairs ( our cards should disappear )</li>
+							<li>pick two cards you like the most and click on them</li>
+							<li>if the pictures on the faces of the cards are the same,we've done with this two and are able to move forward to remaining ones. Otherwise, keep clicking</li>    
+							<li>top tip: don't forget to injoy the game!</li>
+						 </ul>
+						<p>To start a new game click the 'New Game' button</p>
+					</section>
+					<section id='timerSection' class='display_none timer'>
+					   <span class='timer_name'>Time: </span><h2 id="timer">00 : 00</h2>
+					</section>
+					<section>
+					  <div id="memoryBoard" class='gameBoard'></div>
+					<section>
+				</main>
+			  </div>
+<script src="./js/script.js"></script>
+<script src="https://use.fontawesome.com/a70af1b447.js"></script>
+</body>
